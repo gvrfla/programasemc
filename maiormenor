@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main ()
+{
+	float n = 0.00, media = 0.00, maior = 0.00, menor = 999999.00;
+	int i = 0, q = 0;
+	printf ("Quantas notas deseja inserir --> ");
+	scanf ("%d", &q);
+
+	for (i = 1; i <= q; i++)
+		{
+			printf ("\nDigite a nota %i --> ", i);
+			scanf ("%f", &n);
+			if (n > maior) maior = n;
+			if (n < menor) menor = n;
+		}
+
+	media = (maior + menor)/2;
+	printf ("\n\nO numero maior foi o %.2f", maior);
+	printf ("\n\nO numero menor foi o %.2f", menor);
+	printf ("\n\nA media entre eles e de %.2f", media);
+
+getch();
+return 0;
