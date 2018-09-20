@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main ()
+{
+   //declaração de variáveis
+   // sb = bruto, sl = líquido, d = desconto 
+   int sb = 0, sl = 0, d = 0;
+   //entrada 
+   printf ("Digite o seu salario liquido --> ");
+   scanf ("%d", &sb);
+   //condição
+   if (sb <= 1500)
+   {
+          d = (0.05 * sb);
+          sl = sb - d;
+          printf ("/nO salario bruto e de: %d", sl);
+   }
+   
+   else if (sb <= 3500)
+   {
+          d = (0.10 * sb);
+          sl = sb - d;
+          printf ("/nO salario bruto e de: %d", sl);
+   }
+   
+   else
+   {
+          d = (0.15 * sb);
+          sl = sb - d;
+          printf ("/nO salario bruto e de: %d", sl);
+   }
+   
+getch();
+return 0;
+}
