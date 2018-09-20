@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main ()
+{
+	//declaração das variaveis
+	int n, f = 1, n1;
+	//começo do programa
+	printf ("Qual número que deseja fatorar --> ");
+	scanf ("%d", &n);
+	//determinar qual sera o numero exposto no final
+	n1 = n; 
+	//setença a ser executada até que o seja n > 1
+	do {
+		f = f * n;
+		n = n - 1;
+	} while (n > 0);
+	// exibir resultados 
+	printf ("O resultado de %d! = %d", n1, f);
+getch();
+return 0;
+}
