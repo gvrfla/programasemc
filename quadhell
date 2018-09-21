@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int n, n1, e;
+    //entrada dos lados
+    do{
+    printf ("Qual numero de lados --> ");
+    scanf ("%d", &n);
+    printf ("\n");
+    n1 = n;
+    } while (n < 4 || n > 80);
+    //condição a ser seguida
+    //primeira linha
+    do {
+       n * printf ("#");
+       n--;
+       } while (n > 0);
+       n = n1 - 2;
+       e = n1 - 2;
+    //linhas seguintes
+    do {
+       printf ("\n#");
+       //espaços a serem dados -2 
+       do {
+           e * printf (" ");
+           e--;
+           } while (e > 0);
+       e = n1 - 2;
+       printf ("#"); 
+       n--;
+       } while (n > 0);
+       //pular para a proxima linha
+       printf ("\n");
+       n = n1;
+    //ultima linha
+    do {
+       n * printf ("#");
+       n--;
+       } while (n > 0);
+    
+getch();
+return 0;
+}
