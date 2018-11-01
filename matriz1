@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+
+//variaveis
+int i, j;
+int matriz[3][3];
+
+//obtenção
+for (i = 0; i < 3; i++){
+	for (j = 0; j < 3; j++){
+		printf ("\nEntre com o elemento [%d, %d]:", i+1, j+1);
+		scanf ("%d", &matriz[i][j]);
+	}
+}
+
+//leitura
+printf ("\n\nA matriz ficou:\n\n");
+for (i = 0; i < 3; i++){
+	printf ("|\t");
+	for (j = 0; j < 3; j++){
+		printf ("%d\t", matriz[i][j]);
+	}
+	printf ("|\n");
+}
+
+//diagonal principal
+printf ("\n\nA diagonal principal é:\n");
+for (i = 0; i < 3; i++){
+	printf ("%d ", matriz[i][i]);
+}
+
+//diagonal secundaria
+printf ("\n\nA diagonal secundaria é:\n");
+j = 2;
+for (i = 0; i < 3; i++){
+	printf ("%d ", matriz[i][j]);
+	j--;
+}
+
+
+
+getch();
+return 0;
+}
